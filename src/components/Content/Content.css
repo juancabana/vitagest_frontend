@@ -1,0 +1,143 @@
+.box {
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 1000px;
+  height: 500px;
+  background-color: transparent;
+}
+
+.firstText {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin: 0%;
+  font-size: 50px;
+}
+
+.text {
+  position: fixed;
+  top: 100px;
+}
+
+#text1 {
+  font-size: 120px;
+  color: white;
+}
+#text2 {
+  font-size: 120px;
+  margin-top: -5%;
+  color: #440960;
+}
+
+.secondText {
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+  margin: 0%;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+.content-button-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 229px;
+  height: 54px;
+  left: 466px;
+  top: 466px;
+  border: transparent;
+  background: linear-gradient(
+    92.82deg,
+    rgba(0, 255, 163, 0.83) 10.5%,
+    #440960 85.16%
+  );
+  border-radius: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+.button:hover{
+  color: #0c261e;
+  transition: 0.2s;
+}
+
+.vector {
+  position: absolute;
+  width: 15px;
+  height: 15.590000000000003px;
+  left: 343px;
+  top: 501.38px;
+  border: 30px solid #ffffff;
+  filter: blur(30px);
+  border-radius: 50px;
+}
+
+.sectionImage {
+  background-color: transparent;
+  width: 545.26px;
+  height: 684px;
+  margin-top: -120px;
+  margin-left: 495px;
+}
+
+#rectangle1 {
+  position: absolute;
+  width: 438.4px;
+  height: 402.09px;
+  left: 827px;
+  top: 195px;
+
+  background: #01ffb3;
+  border-radius: 80px;
+  transform: matrix(-0.24, -0.98, 0.95, -0.28, 0, 0);
+}
+
+#rectangle2 {
+  position: absolute;
+  width: 430.98px;
+  height: 410.03px;
+  left: 839px;
+  top: 198px;
+
+  background: #239494;
+  border-radius: 80px;
+  transform: matrix(-0.48, -0.92, 0.81, -0.52, 0, 0);
+}
+
+.imgGirl {
+  position: absolute;
+  width: 497px;
+  height: 661.82px;
+  left: 819.51px;
+  top: 21px;
+  z-index: 0;
+}
+.wrapper-social-media{
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 650px;
+  left: 45px;
+  width: 300px;
+  height: 50px;
+}
+.location-wrapper{
+position: absolute;
+  left: 1370px;
+
+
+}
+
+
+
+.links-social{
+  border-radius: 50px;
+  display: block;
+  height: 100%;
+  width: 50px;
+}

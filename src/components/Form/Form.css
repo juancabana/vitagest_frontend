@@ -1,0 +1,168 @@
+#container {
+  overflow: hidden;
+  position: absolute;
+  width: 588px;
+  height: 588px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  filter: drop-shadow(0px 4px 60px rgba(0, 0, 0, 0.2));
+  top: 100px;
+  right: 200px;
+}
+
+.section-logo-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+#section-logo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 100%;
+  right: 10%;
+  padding-right: 20px;
+}
+#secction-formulario{
+display: flex;
+    justify-content: center;
+}
+
+.h2-login{
+
+  font-family: "Poppins";
+  margin: 0%;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+}
+
+.h1-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+
+#linea1,
+#linea2 {
+  width: auto;
+  height: 50px;
+  justify-content: center;
+  padding-left: 80px;
+  text-align: left;
+  margin: 0%;
+
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 430px;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 98%;
+  height: 65px;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.wrapper.User {
+  margin-bottom: 15px;
+}
+.wrapper.Password {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.labIDuser,
+.labPassword {
+  grid-column-start: 2;
+  justify-self: left;
+
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.ImgUser,
+.imgPassword {
+  justify-self: start;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+}
+
+.IdUserFor,
+.PasswordFor {
+  justify-self: left;
+  width: 100%;
+}
+#IduserFor,
+#PasswordFor {
+  width: 100%;
+  height: 40px;
+
+  border: 0px;
+  background-color: #dbd8d848;
+  border-radius: 5px;
+}
+
+.Check {
+  display: grid;
+  grid-template-columns: 7% 93%;
+  height: 40px;
+  width: 470px;
+margin-left: 40px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.rememLab {
+  text-align: start;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.buttonForm {
+	justify-content: center;
+  margin-top: 40px;
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+.LogIn {
+  display: flex;
+  text-decoration: none;
+  width: 445px ;
+  height: 40px;
+  background: linear-gradient(90.17deg, #09a7bc 0.19%, #2ec0ee 99.77%);
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 12px;
+
+}

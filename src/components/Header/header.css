@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+.rectangle {
+  top: 0px;
+  margin: 0%;
+  background-color: cadetblue;
+  height: 70px;
+  width: 100vw;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 35px;
+  padding-right: 45px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.logo{
+  height: 60px;
+  width: 65px;
+  background-image: url(./../../core/assets/img/Logo-Vitarrico.png);
+  background-size: cover;
+}
+.wrapper-first-header{
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-slogan-header{
+  margin-left: 30PX;
+}
+
+.slogan-header{
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  margin: 0%;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.wrapper-second-header{
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+
+  align-items: center;
+}
+.navlink{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  text-decoration: none;
+  font-family: poppins;
+  font-size: 20 px;
+  color: white;
+}
+.navlink:hover{
+  transform:  scale(0.9); 
+
+  color: rgb(209, 244, 232);
+  font-weight: 400;
+  transition: 0.2s;
+}
+
+.icon-house{
+  width: 20px;
+  height: 100%;
+}

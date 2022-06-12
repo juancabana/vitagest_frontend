@@ -1,0 +1,11 @@
+.ContentUsers {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 30px;
+  width: 100%;
+  height: auto;
+  background: rgba(120, 196, 186, 0.44);
+  border-radius: 10px;
+  align-items: center;
+}
