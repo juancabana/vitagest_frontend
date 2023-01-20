@@ -164,5 +164,8 @@ margin-left: 40px;
   font-family: "Poppins";
   font-weight: 700;
   font-size: 12px;
+}
 
+.LogIn:hover{
+  color: #cee3e6;
 }

@@ -1,9 +1,12 @@
 .box {
-  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  /* background-color: #01ffb3; */
+  /* margin-top: 10%;
   margin-left: 15%;
   width: 1000px;
   height: 500px;
-  background-color: transparent;
+  background-color: transparent; */
 }
 
 .firstText {
@@ -14,14 +17,15 @@
 }
 
 .text {
-  position: fixed;
-  top: 100px;
+  /* position: fixed;
+  top: 100px; */
 }
 
 #text1 {
   font-size: 120px;
   color: white;
 }
+
 #text2 {
   font-size: 120px;
   margin-top: -5%;
@@ -29,7 +33,7 @@
 }
 
 .secondText {
-  position: fixed;
+  /* position: fixed; */
   font-family: "Roboto", sans-serif;
   margin: 0%;
   font-size: 50px;
@@ -37,20 +41,20 @@
   -webkit-text-stroke: 1px white;
 }
 .content-button-contact {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .button {
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   width: 229px;
   height: 54px;
-  left: 466px;
-  top: 466px;
+  /* left: 466px;
+  top: 466px; */
   border: transparent;
   background: linear-gradient(
     92.82deg,
@@ -78,11 +82,11 @@
 }
 
 .sectionImage {
-  background-color: transparent;
-  width: 545.26px;
-  height: 684px;
-  margin-top: -120px;
-  margin-left: 495px;
+  /* background-color: transparent; */
+  /* width: 545.26px;
+  height: 684px; */
+  /* margin-top: -120px;
+  margin-left: 495px; */
 }
 
 #rectangle1 {
@@ -121,14 +125,16 @@
   display: flex;
   justify-content: space-evenly;
   position: absolute;
-  top: 650px;
+  /* top: 650px; */
+  bottom: 40px;
   left: 45px;
   width: 300px;
   height: 50px;
 }
 .location-wrapper{
 position: absolute;
-  left: 1370px;
+  right: 30px;
+  bottom: 40px;
 
 
 }
