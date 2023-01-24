@@ -29,12 +29,12 @@ class Background extends Component {
                 <ellipse cx="400" cy="400" rx="400" ry="400" />
               </svg>
             </div>
-
             {/* <!-- Este es el fondo que pone borrosas las elipses  --> */}
-            <div className="backgroundDiv">
+            
+          </div>
+          <div id="backgroundDiv">
               <Content />
             </div>
-          </div>
         </div>
       </>
     );

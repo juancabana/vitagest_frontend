@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
 import GET_PROVIDERS from "./getProviders.graphql";
+import GET_PRODUCTS from "./getProducts.graphql";
 
-const UPDATE_PROVIDER = gql`
+const UPDATE_PRODUCT = gql`
   mutation updateProduct(
     $id: ID!
     $name: String!
     $category: String!
     $price: Float
 
-  ) {
-    updateProduct(
-      id: $id
+  ) {updateProduct(
+
+    id: $id
       product: {
         name: $name
         category: $category
-        price: $price
-
+        price: $price        
       }
+
     ) {
       _id
       name
@@ -27,7 +28,7 @@ const UPDATE_PROVIDER = gql`
     }
   }
 `;
-const UpdateProduct = (props) => {
+const UpdateProductbyid = (props) => {
   const [mostrarFormEdit, setMostrarFormEdit] = useState(false);
 
   const id = props.id;
@@ -35,21 +36,22 @@ const UpdateProduct = (props) => {
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
 
-  const [updateProvider] = useMutation(UPDATE_PROVIDER, {
-    refetchQueries: [{ query: GET_PROVIDERS }],
+  const [updateProduct] = useMutation(UPDATE_PRODUCT, {
+    refetchQueries: [{ query: GET_PRODUCTS }],
   });
 
   const handleSubmitAdd = (e) => {
     e.preventDefault();
+    // console.log(props)
 
-    updateProvider({
+    updateProduct({
       variables: {
         id: props.id,
-        name,
-        category,
-        price,
+        name: props.name,
+        category: props.category,
+        price: props.price,
  
-      },
+      }, 
     });
 
     setName("");
@@ -57,17 +59,17 @@ const UpdateProduct = (props) => {
     setPrice("");
   };
 
-  const editProvider = () => {
-    setMostrarFormEdit(!mostrarFormEdit);
-    updateProvider({
-      variables: {
-        id,
-        name,
-        category,
-        price,
-      },
-    });
-  };
+  // const editProvider = () => {
+  //   setMostrarFormEdit(!mostrarFormEdit);
+  //   updateProvider({
+  //     variables: {
+  //       id,
+  //       name,
+  //       category,
+  //       price,
+  //     },
+  //   });
+  // };
   return (
     <>
       <button
@@ -151,7 +153,7 @@ const UpdateProduct = (props) => {
                     className="button-form"
                     type="submit"
                     value="Submit"
-                    onClick={() => editProvider()}
+                    // onClick={() => editProvider()}
                   >
                     Editar
                   </button>
@@ -172,4 +174,4 @@ const UpdateProduct = (props) => {
   );
 };
 
-export default UpdateProduct;
+export default UpdateProductbyid;

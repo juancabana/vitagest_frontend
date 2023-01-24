@@ -8,9 +8,7 @@ class Content extends Component {
     return (
       <>
         <div className="box">
-
           <div className="wrapper-content">
-
             <div className="text">
               <div className="firstText">
                 <h1 id="text1">BIENVENIDO</h1>
@@ -23,7 +21,11 @@ class Content extends Component {
 
             {/* <!-- Parte del boton --> */}
             <div className="content-button-contact">
-              <a className="button" href="mailto: juand.cabanat@unac.edu.co" rel="noopener noreferrer">
+              <a
+                className="button"
+                href="mailto: juand.cabanat@unac.edu.co"
+                rel="noopener noreferrer"
+              >
                 Contactanos.
               </a>
             </div>
@@ -35,7 +37,6 @@ class Content extends Component {
             <svg id="rectangle2"></svg>
             <img className="imgGirl" src={imgGirl} alt="" />
           </div>
-
         </div>
         <div className="wrapper-social-media">
           <a
@@ -353,10 +354,7 @@ class Content extends Component {
                 d="M51.5,67.9c-4.3,0-8.4-1.4-11.8-4L34,65.8c-0.2,0.1-0.4,0-0.5-0.1c-0.1-0.1-0.2-0.3-0.1-0.5l1.9-6 c-2.1-3.2-3.2-6.9-3.2-10.7c0-10.7,8.7-19.4,19.4-19.4c6.1,0,11.8,2.8,15.5,7.7c0.2,0.2,0.1,0.5-0.1,0.7c-0.2,0.2-0.5,0.1-0.7-0.1 c-3.5-4.6-8.9-7.3-14.7-7.3c-10.1,0-18.4,8.3-18.4,18.4c0,3.7,1.1,7.3,3.2,10.3c0.1,0.1,0.1,0.3,0.1,0.4l-1.7,5.3l5-1.6 c0.2-0.1,0.3,0,0.5,0.1c3.3,2.6,7.2,4,11.4,4c10.1,0,18.4-8.3,18.4-18.4c0-1-0.1-2.1-0.3-3.1c0-0.3,0.1-0.5,0.4-0.6 c0.3,0,0.5,0.1,0.6,0.4c0.2,1.1,0.3,2.2,0.3,3.2C70.9,59.2,62.2,67.9,51.5,67.9z"
               />
               <g>
-                <path
-                  fill="#5aba9e"
-                  d="M69.5,42.6c-0.4-1.1-0.9-2.2-1.4-3.3"
-                />
+                <path fill="#5aba9e" d="M69.5,42.6c-0.4-1.1-0.9-2.2-1.4-3.3" />
                 <path
                   fill="#472b29"
                   d="M69.5,43.1c-0.2,0-0.4-0.1-0.5-0.3c-0.4-1.1-0.8-2.2-1.4-3.2c-0.1-0.2,0-0.5,0.2-0.7c0.2-0.1,0.5,0,0.7,0.2 c0.6,1.1,1.1,2.2,1.5,3.3c0.1,0.3-0.1,0.5-0.3,0.6C69.6,43.1,69.5,43.1,69.5,43.1z"
@@ -424,10 +422,7 @@ class Content extends Component {
                 fill="#f1bc19"
                 d="M21 66A1 1 0 1 0 21 68A1 1 0 1 0 21 66Z"
               />
-              <path
-                fill="#fff"
-                d="M80 33A1 1 0 1 0 80 35A1 1 0 1 0 80 33Z"
-              />
+              <path fill="#fff" d="M80 33A1 1 0 1 0 80 35A1 1 0 1 0 80 33Z" />
               <path
                 fill="#67ba8c"
                 d="M35.304,71.3c-3.642,0-6.604-2.963-6.604-6.604V37.305c0-3.642,2.962-6.604,6.604-6.604h27.391 c3.642,0,6.604,2.963,6.604,6.604v27.391c0,3.642-2.963,6.604-6.604,6.604H35.304z"

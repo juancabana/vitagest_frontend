@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UpdateProduct from "../../graphql/UpdateProduct";
 import imgProduct from "./../../core/assets/img/icons8-producto-usado-100.png";
 import CreateProduct from "../../graphql/CreateProduct";
-import './../TopBarProducts/TopBarProducts.css'
+import "./../TopBarProducts/TopBarProducts.css";
 
 import {
   Button,
@@ -47,17 +47,13 @@ const ListProducts = () => {
           <input
             className="input-search"
             type="search"
-            placeholder="&#xF004; Search..."
+            placeholder="Search..."
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}
           />
         </div>
       </div>
-
-
-
-
 
       <div className="ListProducts">
         <div className="containerProducts">
@@ -80,7 +76,7 @@ const ListProducts = () => {
                 }
               })
               .map((product) => (
-                <tr className="contenttableProducts">
+                <tr className="contenttableProducts" key={product.id}>
                   <td className="content-table">{product._id}</td>
                   <td className="content-table">{product.name}</td>
                   <td className="content-table">{product.category}</td>
@@ -261,76 +257,3 @@ const ListProducts = () => {
 
 export default ListProducts;
 
-// state = {
-//   data: data,
-//   form: {
-//     id: "",
-//     nombre: "",
-//     categoria: "",
-//     precio: "",
-//   },
-//   modalInsertar: false,
-//   modalEditar: false,
-// };
-
-// handleChange = (e) => {
-//   this.setState({
-//     form: {
-//       ...this.state.form,
-//       [e.target.name]: e.target.value,
-//     },
-//   });
-// };
-
-// mostrarModalInsertar = () => {
-//   this.setState({ modalInsertar: true });
-// };
-
-// ocultarModalInsertar = () => {
-//   this.setState({ modalInsertar: false });
-// };
-
-// mostrarModalEditar = (registro) => {
-//   this.setState({ modalEditar: true, form: registro });
-// };
-
-// ocultarModalEditar = () => {
-//   this.setState({ modalEditar: false });
-// };
-
-// insertar = () => {
-//   var valorNuevo = { ...this.state.form };
-//   valorNuevo.id = this.state.data.length + 1;
-//   var lista = this.state.data;
-//   lista.push(valorNuevo);
-//   this.setState({ data: lista, modalInsertar: false });
-// };
-
-// editar = (dato) => {
-//   var contador = 0;
-//   var lista = this.state.data;
-//   lista.map((registro) => {
-//     if (dato.id == registro.id) {
-//       lista[contador].nombre = dato.nombre;
-//       lista[contador].precio = dato.precio;
-//       lista[contador].categoria = dato.categoria;
-//     }
-//     contador++;
-//   });
-//   this.setState({ data: lista, modalEditar: false });
-// };
-
-// eliminar = (dato) => {
-//   var opcion = window.confirm("¿Desea eliminar el registro " + dato.id + "?");
-//   if (opcion) {
-//     var contador = 0;
-//     var lista = this.state.data;
-//     lista.map((registro) => {
-//       if (registro.id == dato.id) {
-//         lista.splice(contador, 1);
-//       }
-//       contador++;
-//     });
-//     this.setState({ data: lista });
-//   }
-// };

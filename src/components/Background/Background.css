@@ -34,12 +34,19 @@ body {
 
 .ellipses {
   display: flex;
+  position: absolute;
+  filter: blur(300px);
+  
+  
 }
 
-.backgroundDiv {
+
+#backgroundDiv {
   position: absolute;
-  background: rgba(45, 31, 31, 0.61);
-  backdrop-filter: blur(300px);
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: rgb(53 29 50 / 61%);
   width: 100%;
-  height:calc( 100vh - 70px);
+  height: 100%;
 }

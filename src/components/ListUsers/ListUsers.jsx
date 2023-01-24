@@ -45,7 +45,7 @@ const ListUsers = () => {
           <input
             className="input-search"
             type="search"
-            placeholder="&#xF004; Search..."
+            placeholder="Search..."
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}

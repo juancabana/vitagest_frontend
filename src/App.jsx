@@ -5,17 +5,14 @@ import client from "./core/config/client";
 
 import { ApolloProvider } from "@apollo/client";
 
-
 class App extends Component {
   render() {
     return (
-    <ApolloProvider client={client}>
-
-      <div className="App">
-        <AppRouter />
-      </div>
-    </ApolloProvider>
-
+      <ApolloProvider client={client}>
+        <div className="App">
+          <AppRouter />
+        </div>
+      </ApolloProvider>
     );
   }
 }
