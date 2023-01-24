@@ -1,29 +1,17 @@
 import React, { useState } from "react";
-import imgProviders from './../core/assets/img/icons8-hombre-en-la-caja-del-producto-red-jacket-100.png'
+import imgProviders from "./../core/assets/img/icons8-hombre-en-la-caja-del-producto-red-jacket-100.png";
 import { gql, useMutation } from "@apollo/client";
 import Swal from "sweetalert2";
 import GET_PRODUCT from "./getProducts.graphql";
 
-
 const CREATE_PRODUCT = gql`
-  mutation createProduct(
-    $name: String!
-    $category: String!
-    $price: Float!
-
-  ) {
+  mutation createProduct($name: String!, $category: String!, $price: Float!) {
     createProduct(
-      product: {
-        name: $name
-        category: $category
-        price: $price
-  
-      }
+      product: { name: $name, category: $category, price: $price }
     ) {
       name
       category
       price
-
     }
   }
 `;
@@ -35,9 +23,8 @@ const CreateProduct = () => {
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
 
-
   const [createProduct] = useMutation(CREATE_PRODUCT, {
-    refetchQueries: [{query: GET_PRODUCT}]
+    refetchQueries: [{ query: GET_PRODUCT }],
   });
 
   const handleSubmit = (e) => {
@@ -48,40 +35,33 @@ const CreateProduct = () => {
         name,
         price,
         category,
-
       },
     });
 
     setName("");
     setCategory("");
     setPrice("");
-
   };
-
-
 
   const addProduct = () => {
     setMostrarFormAdd(!mostrarFormAdd);
     createProduct({
       variables: {
-
         name,
         price: Number(price),
         category,
-
       },
     });
     Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Se ha guardado el producto correctamente',
+      position: "top-end",
+      icon: "success",
+      title: "Se ha guardado el producto correctamente",
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   };
   return (
     <>
-          
       <button
         className="button-new"
         onClick={() => setMostrarFormAdd(!mostrarFormAdd)}
@@ -100,10 +80,7 @@ const CreateProduct = () => {
       <div className={mostrarFormAdd ? "show-element" : null}>
         {mostrarFormAdd && (
           <div className="wrapper-form">
-            <form
-              onSubmit={handleSubmit}
-              className="form-create"
-            >
+            <form onSubmit={handleSubmit} className="form-create">
               <div>
                 <div>
                   <h2 className="h1-form">Insertar producto</h2>
@@ -127,7 +104,6 @@ const CreateProduct = () => {
                   />
                 </div>
 
-        
                 <div className="wrapper-label-form">
                   <label className="label-form">Categoria: </label>
                   <input
@@ -148,7 +124,7 @@ const CreateProduct = () => {
                     type="number"
                     required
                     value={price}
-                    onChange={(evt) => setPrice( parseFloat(evt.target.value) )}
+                    onChange={(evt) => setPrice(parseFloat(evt.target.value))}
                     placeholder="precio del producto (En pesos)"
                   />
                 </div>
@@ -156,14 +132,17 @@ const CreateProduct = () => {
 
               <div>
                 <button
-
-                className="button-form"
-                type="submit"
-                value="Submit"
-                onClick={() => addProduct()}
-
-                >Insertar</button>
-                <button className="button-form" onClick={() => setMostrarFormAdd(!mostrarFormAdd)}>
+                  className="button-form"
+                  type="submit"
+                  value="Submit"
+                  onClick={() => addProduct()}
+                >
+                  Insertar
+                </button>
+                <button
+                  className="button-form"
+                  onClick={() => setMostrarFormAdd(!mostrarFormAdd)}
+                >
                   Cancelar
                 </button>
               </div>

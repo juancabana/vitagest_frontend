@@ -112,15 +112,15 @@ textarea {
   padding-right: 40px;
   border-radius: 10px;
 }
-.h1-form{
+.h1-form {
   font-family: poppins;
 }
-.form-control{
+.form-control {
   height: 35px;
   border-radius: 10px;
   border: solid 1.5px rgb(7, 124, 142);
 }
-.wrapper-label-form{
+.wrapper-label-form {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -128,12 +128,12 @@ textarea {
   margin-bottom: 7px;
 }
 
-.label-form{
+.label-form {
   font-family: poppins;
   font-size: 14px;
   margin-bottom: 3px;
 }
-.button-form{
+.button-form {
   width: 80px;
   height: 35px;
   margin-top: 15px;
@@ -144,5 +144,4 @@ textarea {
   background-color: #ffffff;
   font-family: "Niramit";
   color: #000000;
-
 }

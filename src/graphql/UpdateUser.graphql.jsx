@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
 import GET_USERS from "./getUsers.graphql";
+import Swal from "sweetalert2";
 
 const UPDATE_USER = gql`
   mutation updateUser(
@@ -44,7 +45,7 @@ const UpdateUser = (props) => {
   const [country, setcountry] = useState("");
 
   const [updateUser] = useMutation(UPDATE_USER, {
-    refetchQueries: [{query: GET_USERS}]
+    refetchQueries: [{ query: GET_USERS }],
   });
 
   const handleSubmitAdd = (e) => {
@@ -60,6 +61,13 @@ const UpdateUser = (props) => {
         phoneNumber,
         country,
       },
+    });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Se ha actualizado el proveedor correctamente",
+      showConfirmButton: false,
+      timer: 1500,
     });
 
     setfirstName("");
@@ -179,7 +187,9 @@ const UpdateUser = (props) => {
                       name="phoneNumber"
                       required
                       type="number"
-                      onChange={(evt) => setphoneNumber(parseInt(evt.target.value))}
+                      onChange={(evt) =>
+                        setphoneNumber(parseInt(evt.target.value))
+                      }
                       placeholder={props.phoneNumber}
                       onSubmit={handleSubmitAdd}
                     />
@@ -201,7 +211,7 @@ const UpdateUser = (props) => {
 
                 <div>
                   <button
-                  className="button-form"
+                    className="button-form"
                     type="submit"
                     value="Submit"
                     onClick={() => editProduct()}
@@ -209,7 +219,10 @@ const UpdateUser = (props) => {
                     Editar
                   </button>
 
-                  <button className="button-form" onClick={() => setMostrarFormEdit(!mostrarFormEdit)}>
+                  <button
+                    className="button-form"
+                    onClick={() => setMostrarFormEdit(!mostrarFormEdit)}
+                  >
                     Cancelar
                   </button>
                 </div>

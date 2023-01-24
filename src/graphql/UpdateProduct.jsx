@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
-import GET_PROVIDERS from "./getProviders.graphql";
 import GET_PRODUCTS from "./getProducts.graphql";
+import Swal from "sweetalert2";
 
 const UPDATE_PRODUCT = gql`
   mutation updateProduct(
@@ -9,22 +9,15 @@ const UPDATE_PRODUCT = gql`
     $name: String!
     $category: String!
     $price: Float
-
-  ) {updateProduct(
-
-    id: $id
-      product: {
-        name: $name
-        category: $category
-        price: $price        
-      }
-
+  ) {
+    updateProduct(
+      id: $id
+      product: { name: $name, category: $category, price: $price }
     ) {
       _id
       name
       category
       price
-
     }
   }
 `;
@@ -34,42 +27,33 @@ const UpdateProductbyid = (props) => {
   const id = props.id;
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState();
 
   const [updateProduct] = useMutation(UPDATE_PRODUCT, {
     refetchQueries: [{ query: GET_PRODUCTS }],
   });
 
-  const handleSubmitAdd = (e) => {
+  const handleSubmitAdd = async (e) => {
     e.preventDefault();
-    // console.log(props)
 
-    updateProduct({
+    await updateProduct({
       variables: {
-        id: props.id,
-        name: props.name,
-        category: props.category,
-        price: props.price,
- 
-      }, 
+        id: id,
+        name: name,
+        category: category,
+        price: price,
+      },
     });
-
-    setName("");
-    setCategory("");
-    setPrice("");
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Se ha actualizado el producto correctamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    setMostrarFormEdit(!mostrarFormEdit);
   };
 
-  // const editProvider = () => {
-  //   setMostrarFormEdit(!mostrarFormEdit);
-  //   updateProvider({
-  //     variables: {
-  //       id,
-  //       name,
-  //       category,
-  //       price,
-  //     },
-  //   });
-  // };
   return (
     <>
       <button
@@ -139,9 +123,7 @@ const UpdateProductbyid = (props) => {
                       name="price"
                       type="number"
                       required
-                      onChange={(evt) =>
-                        setPrice(parseFloat(evt.target.value))
-                      }
+                      onChange={(evt) => setPrice(parseFloat(evt.target.value))}
                       placeholder={props.price}
                       onSubmit={handleSubmitAdd}
                     />

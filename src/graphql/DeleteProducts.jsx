@@ -15,7 +15,7 @@ const DeleteProduct = (props) => {
   const name = props.name;
 
   const [deleteProduct] = useMutation(DELETE_PRODUCT, {
-    refetchQueries: [ {query: GET_PRODUCTS}]
+    refetchQueries: [{ query: GET_PRODUCTS }],
   });
 
   const handleSubmitDelete = (e) => {
@@ -35,7 +35,6 @@ const DeleteProduct = (props) => {
         id,
       },
     });
-    
   };
   return (
     <>
@@ -53,8 +52,7 @@ const DeleteProduct = (props) => {
           <div>
             <div className="wrapper-form">
               <form onSubmit={handleSubmitDelete} className="form-delete">
-                <div>
-                </div>
+                <div></div>
                 <div className="confirmationMessage">
                   <h3 className="message-delete">
                     ¿Estás seguro de querer eliminar el producto {name}?
@@ -66,7 +64,9 @@ const DeleteProduct = (props) => {
                     className="button-form"
                     type="submit"
                     value="Submit"
-                    onClick={() => deleteProducts({ variables: { id: props.id } })}
+                    onClick={() =>
+                      deleteProducts({ variables: { id: props.id } })
+                    }
                   >
                     Eliminar
                   </button>

@@ -5,7 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <h4 className="text-footer">Designed and built                                                                                                                                                           by Juan Cabana Y Alexander Chiquito</h4>
+        <h4 className="text-footer">
+          Designed and built by Juan Cabana Y Alexander Chiquito
+        </h4>
       </div>
     );
   }

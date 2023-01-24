@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
 .rectangle {
   top: 0px;
   margin: 0%;
@@ -14,37 +14,37 @@
   padding-right: 45px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
-.logo{
+.logo {
   height: 60px;
   width: 65px;
   background-image: url(./../../core/assets/img/Logo-Vitarrico.png);
   background-size: cover;
 }
-.wrapper-first-header{
+.wrapper-first-header {
   display: flex;
   align-items: center;
 }
 
-.wrapper-slogan-header{
-  margin-left: 30PX;
+.wrapper-slogan-header {
+  margin-left: 30px;
 }
 
-.slogan-header{
+.slogan-header {
   color: white;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0%;
   font-size: 35px;
   font-weight: 700;
 }
 
-.wrapper-second-header{
+.wrapper-second-header {
   display: flex;
   width: 500px;
   justify-content: space-around;
 
   align-items: center;
 }
-.navlink{
+.navlink {
   display: flex;
   align-items: center;
   height: 70px;
@@ -53,15 +53,15 @@
   font-size: 20 px;
   color: white;
 }
-.navlink:hover{
-  transform:  scale(0.9); 
+.navlink:hover {
+  transform: scale(0.9);
 
   color: rgb(209, 244, 232);
   font-weight: 400;
   transition: 0.2s;
 }
 
-.icon-house{
+.icon-house {
   width: 20px;
   height: 100%;
 }

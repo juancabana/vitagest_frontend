@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .ListUsers {
   display: flex;
   margin-top: 15px;
@@ -35,17 +35,12 @@
   height: 50px;
   width: 100%;
   align-items: center;
-  background-color: #F3FBFB;
+  background-color: #f3fbfb;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 150px 200px 1fr 150px 1fr 150px 80px;
-
-
-
-
-
 }
 .containerbuttons {
   display: flex;
@@ -55,7 +50,7 @@
 
 .buttonedit,
 .buttondelete {
-  fill: #F3FBFB;
+  fill: #f3fbfb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,14 +63,11 @@
   margin-left: 5px;
 }
 
-.buttonedit:hover{
+.buttonedit:hover {
   background-color: #0d98ab;
-
 }
-.buttondelete:hover{
-
+.buttondelete:hover {
   background-color: #be074d;
-
 }
 .buttonedit {
   background-color: #10cde6;
@@ -83,20 +75,17 @@
 .buttondelete {
   background-color: #ee079c;
 }
-.subtitle-list{
+.subtitle-list {
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.content-table{
-  
+.content-table {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
-
 
 .form-delete {
   display: flex;
@@ -111,7 +100,7 @@
   padding-right: 40px;
   border-radius: 10px;
 }
-.message-delete{
+.message-delete {
   font-size: 20px;
   margin-bottom: 30px;
 }

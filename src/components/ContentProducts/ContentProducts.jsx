@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 
 import "./ContentProducts.css";
-import ListProducts from "../../components/ListProucts/ListProducts"; 
-
-
+import ListProducts from "../../components/ListProucts/ListProducts";
 
 class ContentProducts extends Component {
   render() {
     return (
       <div className="ContentProducts">
-        <ListProducts/>
-       
-
-    
+        <ListProducts />
       </div>
     );
   }

@@ -28,10 +28,9 @@ const ListUsers = () => {
 
   return (
     <>
-     <div className="TopBarUsers">
+      <div className="TopBarUsers">
         <div className="wrapper-buttons">
-         
-        <CreateUser/>
+          <CreateUser />
         </div>
 
         <div className="wrapper-h1">
@@ -65,41 +64,46 @@ const ListUsers = () => {
               <th className="subtitle-list">ACTIONS</th>
             </tr>
             {data &&
-              data.users.filter((val) => {
-                if (searchTerm == "") {
-                  return val;
-                } else if (
-                  val.firstName.toLowerCase().includes(searchTerm.toLowerCase())
-                ) {
-                  return val;
-                }
-              })
-              .map((user) => (
-                <tr className="contenttableUsers" key={user._id}>
-                  <td className="content-table content-table-id">{user._id}</td>
-                  <td className="content-table">{user.firstName}</td>
-                  <td className="content-table">{user.lastName}</td>
-                  <td className="content-table">{user.age}</td>
-                  <td className="content-table">{user.phoneNumber}</td>
-                  <td className="content-table">{user.country}</td>
-                  <td className="containerbuttons">
-                    <UpdateUser
-                      id={user._id}
-                      firstName={user.firstName}
-                      lastName={user.lastName}
-                      password={user.password}
-                      age={user.age}
-                      phoneNumber={user.phoneNumber}
-                      country={user.country}
-                    />
-                    <DeleteUser
-                      id={user._id}
-                      firstName={user.firstName}
-                      lastName={user.lastName}
-                    />
-                  </td>
-                </tr>
-              ))}
+              data.users
+                .filter((val) => {
+                  if (searchTerm == "") {
+                    return val;
+                  } else if (
+                    val.firstName
+                      .toLowerCase()
+                      .includes(searchTerm.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                })
+                .map((user) => (
+                  <tr className="contenttableUsers" key={user._id}>
+                    <td className="content-table content-table-id">
+                      {user._id}
+                    </td>
+                    <td className="content-table">{user.firstName}</td>
+                    <td className="content-table">{user.lastName}</td>
+                    <td className="content-table">{user.age}</td>
+                    <td className="content-table">{user.phoneNumber}</td>
+                    <td className="content-table">{user.country}</td>
+                    <td className="containerbuttons">
+                      <UpdateUser
+                        id={user._id}
+                        firstName={user.firstName}
+                        lastName={user.lastName}
+                        password={user.password}
+                        age={user.age}
+                        phoneNumber={user.phoneNumber}
+                        country={user.country}
+                      />
+                      <DeleteUser
+                        id={user._id}
+                        firstName={user.firstName}
+                        lastName={user.lastName}
+                      />
+                    </td>
+                  </tr>
+                ))}
           </table>
         </div>
       </div>

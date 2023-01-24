@@ -10,7 +10,6 @@ const GET_USERS = gql`
       age
       phoneNumber
       country
-      
     }
   }
 `;

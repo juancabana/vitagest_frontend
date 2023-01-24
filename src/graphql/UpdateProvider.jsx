@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
-import GET_PROVIDERS from './getProviders.graphql'
+import GET_PROVIDERS from "./getProviders.graphql";
+import Swal from "sweetalert2";
 
 const UPDATE_PROVIDER = gql`
   mutation updateSupplier(
@@ -34,10 +35,10 @@ const updateProvider = (props) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [experience, setExperience] = useState("");
-  const [business, setBusiness  ] = useState("");
+  const [business, setBusiness] = useState("");
 
   const [updateProvider] = useMutation(UPDATE_PROVIDER, {
-    refetchQueries: [{query: GET_PROVIDERS}]
+    refetchQueries: [{ query: GET_PROVIDERS }],
   });
 
   const handleSubmitAdd = (e) => {
@@ -50,7 +51,6 @@ const updateProvider = (props) => {
         location,
         experience,
         business,
-
       },
     });
 
@@ -58,12 +58,11 @@ const updateProvider = (props) => {
     setLocation("");
     setExperience("");
     setBusiness();
-
   };
 
-  const editProvider = () => {
+  const editProvider = async () => {
     setMostrarFormEdit(!mostrarFormEdit);
-    updateProvider({
+    await updateProvider({
       variables: {
         id,
         name,
@@ -71,6 +70,13 @@ const updateProvider = (props) => {
         experience,
         business,
       },
+    });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Se ha actualizado el proveedor correctamente",
+      showConfirmButton: false,
+      timer: 1500,
     });
   };
   return (
@@ -142,7 +148,9 @@ const updateProvider = (props) => {
                       name="experience"
                       type="number"
                       required
-                      onChange={(evt) => setExperience(parseFloat(evt.target.value))}
+                      onChange={(evt) =>
+                        setExperience(parseFloat(evt.target.value))
+                      }
                       placeholder={props.experience}
                       onSubmit={handleSubmitAdd}
                     />
@@ -160,12 +168,11 @@ const updateProvider = (props) => {
                       onSubmit={handleSubmitAdd}
                     />
                   </div>
-
                 </div>
 
                 <div>
                   <button
-                  className="button-form"
+                    className="button-form"
                     type="submit"
                     value="Submit"
                     onClick={() => editProvider()}
@@ -173,7 +180,10 @@ const updateProvider = (props) => {
                     Editar
                   </button>
 
-                  <button className="button-form" onClick={() => setMostrarFormEdit(!mostrarFormEdit)}>
+                  <button
+                    className="button-form"
+                    onClick={() => setMostrarFormEdit(!mostrarFormEdit)}
+                  >
                     Cancelar
                   </button>
                 </div>

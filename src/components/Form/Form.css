@@ -28,13 +28,12 @@
   right: 10%;
   padding-right: 20px;
 }
-#secction-formulario{
-display: flex;
-    justify-content: center;
+#secction-formulario {
+  display: flex;
+  justify-content: center;
 }
 
-.h2-login{
-
+.h2-login {
   font-family: "Poppins";
   margin: 0%;
   margin-left: 10px;
@@ -130,7 +129,7 @@ display: flex;
   grid-template-columns: 7% 93%;
   height: 40px;
   width: 470px;
-margin-left: 40px;
+  margin-left: 40px;
   margin-top: 15px;
   align-items: center;
 }
@@ -143,7 +142,7 @@ margin-left: 40px;
 }
 
 .buttonForm {
-	justify-content: center;
+  justify-content: center;
   margin-top: 40px;
   display: flex;
   height: auto;
@@ -153,7 +152,7 @@ margin-left: 40px;
 .LogIn {
   display: flex;
   text-decoration: none;
-  width: 445px ;
+  width: 445px;
   height: 40px;
   background: linear-gradient(90.17deg, #09a7bc 0.19%, #2ec0ee 99.77%);
   color: #ffffff;
@@ -166,6 +165,6 @@ margin-left: 40px;
   font-size: 12px;
 }
 
-.LogIn:hover{
+.LogIn:hover {
   color: #cee3e6;
 }

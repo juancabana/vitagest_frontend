@@ -4,7 +4,6 @@ import { gql, useMutation } from "@apollo/client";
 import Swal from "sweetalert2";
 import GET_USERS from "./getUsers.graphql";
 
-
 const CREATE_USER = gql`
   mutation createUser(
     $firstName: String!
@@ -45,7 +44,7 @@ const CreateUser = () => {
   const [country, setcountry] = useState("");
 
   const [createUser] = useMutation(CREATE_USER, {
-    refetchQueries: [{query: GET_USERS}]
+    refetchQueries: [{ query: GET_USERS }],
   });
 
   const handleSubmit = (e) => {
@@ -70,13 +69,10 @@ const CreateUser = () => {
     setcountry("");
   };
 
-
-
   const addProduct = () => {
     setMostrarFormAdd(!mostrarFormAdd);
     createUser({
       variables: {
-
         firstName,
         lastName,
         password,
@@ -86,12 +82,12 @@ const CreateUser = () => {
       },
     });
     Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Se ha guardado el usuario correctamente',
+      position: "top-end",
+      icon: "success",
+      title: "Se ha guardado el usuario correctamente",
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   };
   return (
     <>
@@ -113,10 +109,7 @@ const CreateUser = () => {
       <div className={mostrarFormAdd ? "show-element" : null}>
         {mostrarFormAdd && (
           <div className="wrapper-form">
-            <form
-              onSubmit={handleSubmit}
-              className="form-create"
-            >
+            <form onSubmit={handleSubmit} className="form-create">
               <div>
                 <div>
                   <h2 className="h1-form">Insertar usuario</h2>
@@ -187,7 +180,9 @@ const CreateUser = () => {
                     required
                     type="number"
                     value={phoneNumber}
-                    onChange={(evt) => setphoneNumber(parseFloat(evt.target.value))}
+                    onChange={(evt) =>
+                      setphoneNumber(parseFloat(evt.target.value))
+                    }
                     placeholder="Phone number"
                     // onChange={this.handleChange}
                   />
@@ -209,14 +204,17 @@ const CreateUser = () => {
 
               <div>
                 <button
-
-                className="button-form"
-                type="submit"
-                value="Submit"
-                onClick={() => addProduct()}
-
-                >Insertar</button>
-                <button className="button-form" onClick={() => setMostrarFormAdd(!mostrarFormAdd)}>
+                  className="button-form"
+                  type="submit"
+                  value="Submit"
+                  onClick={() => addProduct()}
+                >
+                  Insertar
+                </button>
+                <button
+                  className="button-form"
+                  onClick={() => setMostrarFormAdd(!mostrarFormAdd)}
+                >
                   Cancelar
                 </button>
               </div>

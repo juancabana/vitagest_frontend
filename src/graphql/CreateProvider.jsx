@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import imgProviders from './../core/assets/img/icons8-hombre-en-la-caja-del-producto-red-jacket-100.png'
+import imgProviders from "./../core/assets/img/icons8-hombre-en-la-caja-del-producto-red-jacket-100.png";
 import { gql, useMutation } from "@apollo/client";
 import Swal from "sweetalert2";
 import GET_PROVIDERS from "./getProviders.graphql";
-
 
 const CREATE_PROVIDER = gql`
   mutation createSupplier(
@@ -11,7 +10,6 @@ const CREATE_PROVIDER = gql`
     $location: String!
     $experience: Float!
     $business: String!
-
   ) {
     createSupplier(
       supplier: {
@@ -19,14 +17,12 @@ const CREATE_PROVIDER = gql`
         location: $location
         experience: $experience
         business: $business
-  
       }
     ) {
       name
       location
       experience
       business
-
     }
   }
 `;
@@ -39,9 +35,8 @@ const CreateProvider = () => {
   const [experience, setExperience] = useState("");
   const [business, setBusiness] = useState("");
 
-
   const [createProvider] = useMutation(CREATE_PROVIDER, {
-    refetchQueries: [{query: GET_PROVIDERS}]
+    refetchQueries: [{ query: GET_PROVIDERS }],
   });
 
   const handleSubmit = (e) => {
@@ -53,7 +48,6 @@ const CreateProvider = () => {
         experience,
         location,
         business,
-
       },
     });
 
@@ -61,34 +55,28 @@ const CreateProvider = () => {
     setExperience("");
     setLocation("");
     setBusiness("");
-
   };
-
-
 
   const addProvider = () => {
     setMostrarFormAdd(!mostrarFormAdd);
     createProvider({
       variables: {
-
         name,
         experience: Number(experience),
         location,
         business,
-
       },
     });
     Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Se ha guardado el proveedor correctamente',
+      position: "top-end",
+      icon: "success",
+      title: "Se ha guardado el proveedor correctamente",
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   };
   return (
     <>
-          
       <button
         className="button-new"
         onClick={() => setMostrarFormAdd(!mostrarFormAdd)}
@@ -107,10 +95,7 @@ const CreateProvider = () => {
       <div className={mostrarFormAdd ? "show-element" : null}>
         {mostrarFormAdd && (
           <div className="wrapper-form">
-            <form
-              onSubmit={handleSubmit}
-              className="form-create"
-            >
+            <form onSubmit={handleSubmit} className="form-create">
               <div>
                 <div>
                   <h2 className="h1-form">Insertar proveedor</h2>
@@ -134,7 +119,6 @@ const CreateProvider = () => {
                   />
                 </div>
 
-        
                 <div className="wrapper-label-form">
                   <label className="label-form">Dirección: </label>
                   <input
@@ -155,7 +139,9 @@ const CreateProvider = () => {
                     type="number"
                     required
                     value={experience}
-                    onChange={(evt) => setExperience( parseFloat(evt.target.value) )}
+                    onChange={(evt) =>
+                      setExperience(parseFloat(evt.target.value))
+                    }
                     placeholder="Años de experiencia"
                   />
                 </div>
@@ -177,14 +163,17 @@ const CreateProvider = () => {
 
               <div>
                 <button
-
-                className="button-form"
-                type="submit"
-                value="Submit"
-                onClick={() => addProvider()}
-
-                >Insertar</button>
-                <button className="button-form" onClick={() => setMostrarFormAdd(!mostrarFormAdd)}>
+                  className="button-form"
+                  type="submit"
+                  value="Submit"
+                  onClick={() => addProvider()}
+                >
+                  Insertar
+                </button>
+                <button
+                  className="button-form"
+                  onClick={() => setMostrarFormAdd(!mostrarFormAdd)}
+                >
                   Cancelar
                 </button>
               </div>

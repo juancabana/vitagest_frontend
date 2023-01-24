@@ -1,16 +1,15 @@
-.Home{
-    overflow: hidden;
-    margin-top: 70px;
-    height: calc(100vh - 70px);
+.Home {
+  overflow: hidden;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
 }
 
-body::-webkit-scrollbar{
-    width: 12px;
-    background-color: rgb(232, 223, 223);
-  }
-
-body::-webkit-scrollbar-thumb{
-    background-color: cadetblue;
-    border-radius: 10px;
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgb(232, 223, 223);
 }
-  
+
+body::-webkit-scrollbar-thumb {
+  background-color: cadetblue;
+  border-radius: 10px;
+}

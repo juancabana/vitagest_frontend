@@ -16,7 +16,7 @@ const DeleteUser = (props) => {
   const lastName = props.lastName;
 
   const [deleteUser] = useMutation(DELETE_USER, {
-    refetchQueries: [ {query: GET_USERS}]
+    refetchQueries: [{ query: GET_USERS }],
   });
 
   const handleSubmitDelete = (e) => {
@@ -36,7 +36,6 @@ const DeleteUser = (props) => {
         id,
       },
     });
-    
   };
   return (
     <>
@@ -54,8 +53,7 @@ const DeleteUser = (props) => {
           <div>
             <div className="wrapper-form">
               <form onSubmit={handleSubmitDelete} className="form-delete">
-                <div>
-                </div>
+                <div></div>
                 <div className="confirmationMessage">
                   <h3 className="message-delete">
                     ¿Estás seguro de querer eliminar el usuario {firstName}{" "}

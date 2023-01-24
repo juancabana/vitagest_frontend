@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .ListProviders {
   display: flex;
   margin-top: 15px;
@@ -28,13 +28,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
-.contenttableProviders   {
+.contenttableProviders {
   padding-left: 60px;
   padding-right: 60px;
   height: 50px;
   width: 100%;
   align-items: center;
-  background-color: #F3FBFB;
+  background-color: #f3fbfb;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
@@ -49,7 +49,7 @@
 
 .buttonedit,
 .buttondelete {
-  fill: #F3FBFB;
+  fill: #f3fbfb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,14 +62,11 @@
   margin-left: 5px;
 }
 
-.buttonedit:hover{
+.buttonedit:hover {
   background-color: #0d98ab;
-
 }
-.buttondelete:hover{
-
+.buttondelete:hover {
   background-color: #be074d;
-
 }
 .buttonedit {
   background-color: #10cde6;
@@ -77,16 +74,15 @@
 .buttondelete {
   background-color: #ee079c;
 }
-.subtitle-list{
+.subtitle-list {
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.content-table{
-  font-family: 'Poppins', sans-serif;
-
+.content-table {
+  font-family: "Poppins", sans-serif;
 }
 
-.content-table-location{
+.content-table-location {
   font-size: medium;
 }

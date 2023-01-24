@@ -5,6 +5,7 @@
   padding-bottom: 30px;
   width: 100%;
   height: auto;
+  min-height: 80vh;
   background: rgba(120, 196, 186, 0.44);
   border-radius: 10px;
   align-items: center;
